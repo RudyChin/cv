@@ -33,6 +33,7 @@
 \usepackage{color}
 \usepackage{parskip}
 \usepackage{enumitem}
+\usepackage[T1]{fontenc}
 
 \setlength{\textwidth}{5.1in} % Text width of the document
 
@@ -67,20 +68,13 @@
 \begin{resume}
 
 %----------------------------------------------------------------------------------------
-%	OBJECTIVE SECTION
-%----------------------------------------------------------------------------------------
- 
-%\section{OBJECTIVE}  
-%Summer internship 2015
-
-%----------------------------------------------------------------------------------------
 %	RESEARCH INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
 \vspace*{-5pt}
 \section{RESEARCH\\ INTERESTS} 
 
-I am interested in improving the energy efficiency of mobile Web computing.
+I am interested in improving the energy efficiency and latency of mobile Web computing.
  
 \begin{itemize}[noitemsep, leftmargin=*]
 	\item Web language (HTML, CSS, JavaScript) extensions
@@ -88,11 +82,14 @@ I am interested in improving the energy efficiency of mobile Web computing.
 	\item Mobile processor architecture
 \end{itemize} 
 
+%\section{OBJECTIVE}
+%Apply for summer internship 2015\\
+
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\vspace*{-5pt}
+%\vspace*{-5pt}
 \section{EDUCATION}
 
 \textbf{The University of Texas at Austin} \hfill\textit{2010-present}\\
@@ -108,20 +105,21 @@ Advisor: Yangdong Deng
 %	PUBLICATIONS SECTION
 %----------------------------------------------------------------------------------------
  
-\vspace*{-5pt}
+%\vspace*{-5pt}
 \section{PUBLICATIONS}
 
 {\large\textbf{Journal Articles}}
 
-\begin{itemize}[leftmargin=*] \itemsep -2pt
+\begin{itemize}[leftmargin=*] \itemsep 0pt
 %\vspace*{-5pt}
 	\item \textbf{Yuhao Zhu}, Matthew Halpern, Vijay Janapa Reddi\\
-          \href{}{The Role of the CPU in Energy-Efficient Mobile Web Browsing}\\
-          \textit{IEEE MICRO Mobile Special Issue} (to appear)
+          \href{http://yuhaozhu.com/pubs/ieeemicro15.pdf}{The Role of the CPU in Energy-Efficient Mobile Web Browsing}\\
+          \textit{IEEE MICRO Mobile Special Issue}, Jan/Feb 2015, 35(1):26-33
 
 	\item \textbf{Yuhao Zhu}, Aditya Srikanth, Jingwen Leng, Vijay Janapa Reddi\\
           \href{http://yuhaozhu.com/pubs/cal12.pdf}{Exploiting Webpage Characteristics for Energy-Efficient Mobile Web Browsing}\\
-          \textit{Computer Architecture Letters (CAL)}, Oct 2012, 13(1):33-36
+          \textit{Computer Architecture Letters (CAL)}, Oct 2012, 13(1):33-36\\
+          \textbf{\textsc{One of Three Papers Awarded Best of CAL for 2014}}
 
 	\item \textbf{Yuhao Zhu}, Bo Wang, Yangdong Deng\\
           \href{http://yuhaozhu.com/pubs/todaes11.pdf}{Massively Parallel Logic Simulation with GPUs}\\
@@ -131,14 +129,14 @@ Advisor: Yangdong Deng
 \vspace*{7pt}
 {\large\textbf{Conference Papers}}
 
-\begin{itemize}[leftmargin=*] \itemsep -2pt
+\begin{itemize}[leftmargin=*] \itemsep 0pt
 %\vspace*{-5pt}
 	\item \textbf{Yuhao Zhu}, Matthew Halpern, Vijay Janapa Reddi\\
-          \href{}{Event-based Scheduling for Energy-Efficient QoS (eQoS) in Mobile Web Applications}\\
+          \href{http://yuhaozhu.com/pubs/hpca15.pdf}{Event-based Scheduling for Energy-Efficient QoS (eQoS) in Mobile Web Applications}\\
           \textit{HPCA 2015}
 
 	\item Matthew Halpern, \textbf{Yuhao Zhu}, Vijay Janapa Reddi\\
-          \href{}{Mosaic: A Cross-Platform, Deterministic Record and Replay Tool for the Fragmented Android Ecosystem}\\
+          \href{http://yuhaozhu.com/pubs/ispass15.pdf}{Mosaic: Cross-Platform User-Interaction Record and Replay Tool for the Fragmented Android Ecosystem}\\
           \textit{ISPASS 2015}
 
 	\item \textbf{Yuhao Zhu}, Vijay Janapa Reddi\\
@@ -208,7 +206,7 @@ Event-based Scheduling for Energy-Efficient QoS \hfill(\textit{HPCA 2015})\\
 \begin{itemize}[leftmargin=*] \itemsep -3pt
 \vspace*{-5pt}
 	\item Introduced the notion of ``energy-efficient QoS'' (eQoS). It is a framework to systematically reason about energy-QoS trade-offs in mobile Web applications
-	\item Studied event characteristics, including event latency and event intensity, in mobile Web applications
+	\item Studied fundamental event characteristics (latency and intensity) in mobile Web apps
 	\item Proposed event-based scheduling (EBS). Based on real hardware (Samsung's Exynos 5410 SoC in the ODroid Development board) measurements, EBS achieves about 40\%--55\% energy savings with little QoS violation on the Chromium browser.
 \end{itemize}
 
@@ -227,8 +225,8 @@ Energy-Efficient Mobile Web Browsing on Big/Little Systems \hfill(\textit{CAL, H
 \begin{itemize}[leftmargin=*] \itemsep -3pt
 \vspace*{-5pt}
 	\item Instrumented the Pandaboard (ARM Cortex-A9 based) and Beagleboard (Cortex-A8 based) development boards for hardware power/energy analysis
-	\item Mined the hottest 5,000 webpages, and built regression models for predicting webpage load time and energy consumption
-	\item Proposed and implemented a scheduling mechanism in Mozilla Firefox that leverages big/little heterogeneous systems and outperforms conventional OS DVFS in both performance and energy.
+	\item Built regression models for predicting webpage load time and energy consumption
+	\item Implemented a scheduling mechanism in Mozilla Firefox that leverages big/little heterogeneous systems and outperforms conventional OS DVFS in both performance and energy.
 \end{itemize}
 
 \medskip
@@ -280,7 +278,7 @@ Parallel Gate Level Logical Simulator on GPUs \hfill(\textit{DAC 2010, TODAES})\
 	\item Tiny Transactions on Computer Science (TinyToCS) Volumes III (\url{http://tinytocs.org/})\par
 	\item Artifacts Evaluation CGO-PPoPP 2015\par
 \end{itemize}
-\textbf{External Reviewer} DAC 2011, DAC 2012, TODAES
+\textbf{External Reviewer} DAC 2011, DAC 2012, TODAES, ESL
 
 %\textbf{Committee Member} Artifacts Evaluation CGO-PPoPP 2015\par
 %\textbf{Program Committee Member} Tiny ToCS Volumes III (see \url{http://tinytocs.org/})\par
