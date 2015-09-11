@@ -74,13 +74,16 @@
 \vspace*{-5pt}
 \section{RESEARCH\\ INTERESTS} 
 
-I am interested in improving the energy efficiency and latency of mobile Web computing.
+I am interested in building better hardware and software to make next-generation client + cloud computing faster, more energy-efficient, and deliver user satisfaction.
+
+In my dissertation, I am designing a high-performance and energy-efficient mobile computing substrate that incorporates synergistic cross-layer optimizations across the
+hardware, software, and application layers to maximize system efficiency for Web applications.
  
-\begin{itemize}[noitemsep, leftmargin=*]
-	\item Web language (HTML, CSS, JavaScript) extensions
-	\item Web browser runtime
-	\item Mobile processor architecture
-\end{itemize} 
+%\begin{itemize}[noitemsep, leftmargin=*]
+%	\item Programming language support
+%	\item Runtime system design
+%	\item Processor (micro)architecture.
+%\end{itemize}
 
 %\section{OBJECTIVE}
 %Apply for summer internship 2015\\
@@ -94,12 +97,12 @@ I am interested in improving the energy efficiency and latency of mobile Web com
 
 \textbf{The University of Texas at Austin} \hfill\textit{2010-present}\\
 Ph.D. student, Electrical and Computer Engineering\\
-Advisor: Vijay Janapa Reddi\\
+Advisor: \href{http://3nity.io/~vj/}{Vijay Janapa Reddi}\\
 
 \vspace*{-5pt}
 \textbf{Beihang University, Beijing, China} \hfill\textit{2006-2010}\\
 B.S., Computer Science and Engineering\\
-Advisor: Yangdong Deng
+Advisor: \href{https://research.nvidia.com/content/yangdong-steve-deng}{Yangdong Deng}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS SECTION
@@ -123,7 +126,7 @@ Advisor: Yangdong Deng
 
 	\item \textbf{Yuhao Zhu}, Bo Wang, Yangdong Deng\\
           \href{http://yuhaozhu.com/pubs/todaes11.pdf}{Massively Parallel Logic Simulation with GPUs}\\
-          \textit{Transactions on Design Automation of Electronic Systems (TODAES)}, June 2011, 16(3):29
+          \textit{ACM Transactions on Design Automation of Electronic Systems (TODAES)}, June 2011, 16(3):29
 \end{itemize}
 
 \vspace*{7pt}
@@ -131,6 +134,10 @@ Advisor: Yangdong Deng
 
 \begin{itemize}[leftmargin=*] \itemsep 0pt
 %\vspace*{-5pt}
+	\item \textbf{Yuhao Zhu}, Daniel Richins, Matthew Halpern, Vijay Janapa Reddi\\
+          \href{}{Microarchitectural Implications of Event-driven Server-side Web Applications}\\
+          \textit{MICRO 2015 (to appear)}
+
 	\item \textbf{Yuhao Zhu}, Matthew Halpern, Vijay Janapa Reddi\\
           \href{http://yuhaozhu.com/pubs/hpca15.pdf}{Event-based Scheduling for Energy-Efficient QoS (eQoS) in Mobile Web Applications}\\
           \textit{HPCA 2015}
@@ -169,26 +176,16 @@ Advisor: Yangdong Deng
 {\large\textbf{The University of Texas at Austin (\textit{Graduate})}}\\
 
 \vspace*{-7pt}
-{\large\textit{Thesis Topic: Energy-Efficient Mobile Web Computing}} \hfill\textit{8/2011-present}\\
+{\large\textit{High-Performance and Energy-Efficient Web Computing}} \hfill\textit{8/2011-present}\\
 
 \vspace*{-7pt}
-Language Extensions for Energy-Efficient Mobile Web Applications \hfill(In Progress)\\
+Server Microarchitecture Implications of Event-driven Web Applications \hfill(MICRO 2015)\\
 \vspace*{-10pt}
 \begin{itemize}[leftmargin=*] \itemsep -3pt
 \vspace*{-5pt}
-	\item Performing large user study based on Amazon Mechanical Turk to understand how event executions affect end-user satisfactions
-	\item Proposing new HTML tags and CSS rules that allow programmers to explicitly specify constraints of specific event executions on specific DOM nodes
-	\item Implementing the new language extensions in the Chromium browser.
-\end{itemize}
-
-\medskip
-Eve: An Event-Driven Architecture for Energy-Efficient Mobile Web \hfill(In Progress)\\
-\vspace*{-10pt}
-\begin{itemize}[leftmargin=*] \itemsep -3pt
-\vspace*{-5pt}
-	\item Instrumenting Chromium to analyze the event communication patterns in order to determine the potential ``event-level parallelism'' available in mobile Web applications
-	\item Performing microarchitecture-level simulation to understand the potential benefits of employing event-private instruction delivery structures (cache, branch predictor, etc.)
-	\item Evaluating the feasibility of a hardware implementation (FPGA/ASIC) of event-specific executions based on Xilinx's Zynq platform.
+	\item Identified single-thread performance as a major bottleneck for event-driven server workloads due to front-end inefficiencies in microarchitecture
+	\item Correlated the root-cause of front-end inefficiencies to the event-driven programming model: little intra-event code reuse coupled with heavy inter-event code reuse
+	\item Developed a microarchitecture mechanism that coordinates the instruction cache replacement policy with instruction prefetcher to significantly mitigate front-end bottlenecks.
 \end{itemize}
 
 \medskip
@@ -196,7 +193,7 @@ Understanding the Role of CPU in Mobile Web Browsing \hfill(\textit{IEEE MICRO})
 \vspace*{-10pt}
 \begin{itemize}[leftmargin=*] \itemsep -3pt
 \vspace*{-5pt}
-	\item Instrumented six real Android smartphones to measure how webpage load time and energy consumption vary with CPU performance and network latency (ranging from adverse 2G, 3G, LTE to Wi-Fi)
+	\item Instrumented six top Android smartphones from 2009 to 2014 to quantify how webpage load time and energy consumption vary with CPU performance and network latency
 	\item Proposed a new CPU DVFS governor that coordinates CPU performance with net-work latency for energy savings with little performance impact.
 \end{itemize}
 
@@ -206,8 +203,8 @@ Event-based Scheduling for Energy-Efficient QoS \hfill(\textit{HPCA 2015})\\
 \begin{itemize}[leftmargin=*] \itemsep -3pt
 \vspace*{-5pt}
 	\item Introduced the notion of ``energy-efficient QoS'' (eQoS). It is a framework to systematically reason about energy-QoS trade-offs in mobile Web applications
-	\item Studied fundamental event characteristics (latency and intensity) in mobile Web apps
-	\item Proposed event-based scheduling (EBS). Based on real hardware (Samsung's Exynos 5410 SoC in the ODroid Development board) measurements, EBS achieves about 40\%--55\% energy savings with little QoS violation on the Chromium browser.
+	%\item Studied fundamental event characteristics (latency and intensity) in mobile Web apps
+	\item Proposed and developed event-based scheduling (EBS) as a new method to achieve eQoS. It trades off performance with energy consumption without hurting user QoS experience.
 \end{itemize}
 
 \medskip
@@ -229,17 +226,17 @@ Energy-Efficient Mobile Web Browsing on Big/Little Systems \hfill(\textit{CAL, H
 	\item Implemented a scheduling mechanism in Mozilla Firefox that leverages big/little heterogeneous systems and outperforms conventional OS DVFS in both performance and energy.
 \end{itemize}
 
-\medskip
-{\large\textit{Research Problem: CPU Microarchitecture} (with Prof. Yale N. Patt)} \hfill\textit{8/2010-7/2011}\\
-
-\vspace*{-7pt}
-Microarchitecture Support for Speculative Loop-level SIMDization\\
-\vspace*{-10pt}
-\begin{itemize}[leftmargin=*] \itemsep -3pt
-\vspace*{-5pt}
-	\item Designed Pintools to characterize multiple benchmarks (SPEC2006, SPLASH, etc.) in order to identify the upper bound of loop level parallelization
-	\item Proposed hardware mechanisms for dynamically vectorizing programs on a cycle-accurate x86 microarchitecture simulator.
-\end{itemize}
+%\medskip
+%{\large\textit{CPU Microarchitecture} (with Prof. Yale N. Patt)} \hfill\textit{8/2010-7/2011}\\
+%
+%\vspace*{-7pt}
+%Microarchitecture Support for Speculative Loop-level SIMDization\\
+%\vspace*{-10pt}
+%\begin{itemize}[leftmargin=*] \itemsep -3pt
+%\vspace*{-5pt}
+%	\item Designed Pintools to characterize multiple benchmarks (SPEC2006, SPLASH, etc.) in order to identify the upper bound of loop level parallelization
+%	\item Proposed hardware mechanisms for dynamically vectorizing programs on a cycle-accurate x86 microarchitecture simulator.
+%\end{itemize}
 
 \bigskip
 {\large\textbf{Tsinghua University (\textit{Undergraduate})}}\\
@@ -278,11 +275,16 @@ Parallel Gate Level Logical Simulator on GPUs \hfill(\textit{DAC 2010, TODAES})\
 	\item Tiny Transactions on Computer Science (TinyToCS) Volumes III (\url{http://tinytocs.org/})\par
 	\item Artifacts Evaluation CGO-PPoPP 2015\par
 \end{itemize}
-\textbf{External Reviewer} DAC 2011, DAC 2012, TODAES, ESL
-
-%\textbf{Committee Member} Artifacts Evaluation CGO-PPoPP 2015\par
-%\textbf{Program Committee Member} Tiny ToCS Volumes III (see \url{http://tinytocs.org/})\par
-%\textbf{External Reviewer} DAC 2011, DAC 2012, TODAES
+\textbf{Solicited Reviewer}\\
+\vspace*{-10pt}
+\begin{itemize}[leftmargin=*] \itemsep -3pt
+\vspace*{-5pt}
+	\item DAC 2011, 2012\par
+	\item TODAES 2011\par
+    \item ESL 2015\par
+\end{itemize}
+\textbf{Emerging Topics in Computer System Design Reading Group} (\url{https://goo.gl/gzT4Fw})
+Co-founder and regular discussion moderator. Organized the weekly discussion seminar on computer system research within UT ECE (\textasciitilde 15 graduate students.)
 
 %----------------------------------------------------------------------------------------
 %	INDUSTRIAL EXPERIENCE SECTION
@@ -290,6 +292,15 @@ Parallel Gate Level Logical Simulator on GPUs \hfill(\textit{DAC 2010, TODAES})\
 
 \section{INDUSTRIAL\\ EXPERIENCE} 
 
+{\textbf{Google Inc.}} \hfill{Summer 2015}\\
+\vspace*{-10pt}
+\begin{itemize}[leftmargin=*] \itemsep -3pt
+\vspace*{-5pt}
+	\item Led the efforts of \href{https://docs.google.com/document/d/1La_0PPfsTqHJihazYhff96thhjPtvq1KjAUOJu0dvEg/edit#heading=h.46jecek204ph}{Flow API} Version 2 as part of Trace Event, which is a programming model for Chrome code instrumentation and analysis. It is incorporated into Chrome.
+	\item Developed analysis infrastructure that associates Chrome runtime behaviors with user inputs to enable critical path analysis. It is incorporated into \href{https://github.com/catapult-project/catapult}{Catapult}, which is the official performance analysis tool for Chrome.
+\end{itemize}
+
+\medskip
 {\textbf{AMD Research Lab}} \hfill{Summer 2013}\\
 \vspace*{-10pt}
 \begin{itemize}[leftmargin=*] \itemsep -3pt
